@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Esri Leaflet Quickstart</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <!-- Загрузка bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+  <link rel="icon" href="../assets/images/ico.ico" type="/image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/ico.ico" type="image/x-icon">
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.3.1/dist/esri-leaflet.js"
+    integrity="sha512-Np+ry4Dro5siJ1HZ0hTwn2jsmu/hMNrYw1EIK9EjsEVbDge4AaQhjeTGRg2ispHg7ZgDMVrSDjNrzH/kAO9Law=="
+    crossorigin=""></script>
+
+
+  <link rel="stylesheet" href="../css/map.css">
+
+</head>
+
+<body>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="../index.html">Домой</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../pages/zakon.html">Законодательная база</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="../pages/map1.html">Карта</a>
+    </li>
+  </ul>
+
+  <div id="map"></div>
+
+  <div id="basemaps-wrapper" class="leaflet-bar">
+    <select id="basemaps">
+      <option value="Topographic">Topographic</option>
+      <option value="Streets">Streets</option>
+      <option value="NationalGeographic">National Geographic</option>
+      <option value="Oceans">Oceans</option>
+      <option value="Gray">Gray</option>
+      <option value="DarkGray">Dark Gray</option>
+      <option value="Imagery">Imagery</option>
+      <option value="ImageryClarity">Imagery (Clarity)</option>
+      <option value="ImageryFirefly">Imagery (Firefly)</option>
+      <option value="ShadedRelief">Shaded Relief</option>
+      <option value="Physical">Physical</option>
+    </select>
+  </div>
+
+  <div id="add-layer" class="leaflet-bar">
+    <button id="layerbtn" class="layerbtn">
+      <span id="layerbtn-title">Show</span><br><span>Geojson</span><br>
+    </button>
+  </div>
+
+
+  <!-- "C:\Users\st070125\Desktop\HTML\src\js\map.js" -->
+  <script src="../data/wind_data.js"> </script>
+  <script src="../js/map.js"> </script>
+
+</body>
+
+</html>
