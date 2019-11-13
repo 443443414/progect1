@@ -1,7 +1,14 @@
-var map = L.map('map').setView([60.00, 30.00], 9);
+var map = L.map('map').setView([60.00, 31.60], 7);
 var layer1 = L.tileLayer("https://api.mapbox.com/styles/v1/443443414/ck2rz7yp21i1t1cp39rz58r7p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiNDQzNDQzNDE0IiwiYSI6ImNrMjRmbGloaDB0anMzY21xcWM3dnVwYWQifQ.rQXgw2v8C1LR8MB2oUl0Ig").addTo(map);
 
+var Fuckingicon = L.icon({
+  iconUrl: '../assets/images/point_icon.png',
 
+  iconSize: [20, 20], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [0, 0], // point of the icon which will correspond to marker's location
+  popupAnchor: [0, 00] // point from which the popup should open relative to the iconAnchor
+});
 
 
 function setBasemap(basemap) {
@@ -38,8 +45,14 @@ function setBasemap(basemap) {
 
 
 
+
 /*условие кнопки*/
 var my_layer = L.geoJSON(wind_data, {
+  pointToLayer: function (feature, latlng) {
+    return L.marker(latlng, {
+      icon: Fuckingicon
+    });
+  },
   onEachFeature: function (feature, layer) {
     layer.bindPopup('<strong>Скорость ветра на высоте 10 м:</strong><br>' +
       'Январь ' + feature.properties.field_4 + '<br>' +
@@ -91,3 +104,22 @@ document
       displayLayer();
     });
   });
+
+
+/*my_json = L.geoJson(data, {
+          pointToLayer: function(feature, latlng) {
+              var smallIcon = L.Icon({
+                  options: {
+                      iconSize: [27, 27],
+                      iconAnchor: [13, 27],
+                      popupAnchor:  [1, -24],
+                      iconUrl: 'icone/chapel-2.png'
+                  }
+              });
+              return L.marker(latlng, {icon: smallIcon});
+          },
+         onEachFeature: function (feature, layer) {
+                 layer.bindPopup(feature.properties.ATT1 + '<br />'
+                                               + feature.properties.ATT2);
+         }
+       });*/
