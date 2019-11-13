@@ -56,7 +56,7 @@ var my_layer = L.geoJSON(wind_data, {
       'Декабрь ' + feature.properties.field_15 + '<br>'
     );
   }
-}).addTo(map);
+});
 
 var my_layershown = false;
 
