@@ -17,14 +17,14 @@ body {
 
 #add-layer{
   position: absolute;
-  top: 170px;
+  top: 120px;
   right: 10px;
   z-index: 400;
  }
 
 #basemaps-wrapper {
   position: absolute;
-  top: 110px;
+  top: 60px;
   right: 10px;
   z-index: 400;
   background: white;
