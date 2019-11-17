@@ -14,22 +14,16 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
-
   <link rel="icon" href="../assets/images/ico.ico" type="/image/x-icon">
   <link rel="shortcut icon" href="../assets/images/ico.ico" type="image/x-icon">
-
   <!-- Load Esri Leaflet from CDN -->
   <script src="https://unpkg.com/esri-leaflet@2.3.1/dist/esri-leaflet.js"
     integrity="sha512-Np+ry4Dro5siJ1HZ0hTwn2jsmu/hMNrYw1EIK9EjsEVbDge4AaQhjeTGRg2ispHg7ZgDMVrSDjNrzH/kAO9Law=="
     crossorigin=""></script>
-
-
   <link rel="stylesheet" href="../css/map.css">
-
 </head>
 
 <body>
-
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="nav-link" href="../index.html">Домой</a>
@@ -41,9 +35,7 @@
       <a class="nav-link disabled" href="../pages/map1.html">Карта</a>
     </li>
   </ul>
-
   <div id="map"></div>
-
   <div id="basemaps-wrapper" class="leaflet-bar">
     <select id="basemaps">
       <option value="Topographic">Topographic</option>
@@ -59,18 +51,13 @@
       <option value="Physical">Physical</option>
     </select>
   </div>
-
   <div id="add-layer" class="leaflet-bar">
     <button id="layerbtn" class="layerbtn">
       <span id="layerbtn-title">Show</span><br><span>Geojson</span><br>
     </button>
   </div>
-
-
-
   <script src="../data/wind_data.js"> </script>
   <script src="../js/map.js"> </script>
-
 </body>
 
 </html>
